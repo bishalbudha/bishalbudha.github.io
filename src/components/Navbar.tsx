@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Atom } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -29,8 +29,15 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <div className="text-theme-navy font-semibold text-xl md:text-2xl font-montserrat">
-            Bishal Budha
+          <div className="flex items-center space-x-2">
+            <div className="relative">
+              <Atom className="text-theme-purple w-6 h-6 md:w-7 md:h-7 animate-float" />
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-theme-purple-light rounded-full opacity-75"></div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-theme-navy font-semibold text-xl md:text-2xl font-montserrat bg-gradient-to-r from-theme-navy via-theme-purple to-theme-slate bg-clip-text text-transparent">Bishal Budha</span>
+              <span className="text-xs text-theme-slate opacity-75 tracking-wider font-light">Biophysics Researcher</span>
+            </div>
           </div>
           
           <div className="hidden md:flex space-x-8">
