@@ -8,6 +8,8 @@ import ProjectsSection from '../components/ProjectsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
+import QuantumElements from '../components/QuantumElements';
 
 const Index = () => {
   useEffect(() => {
@@ -37,7 +39,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <ParticleBackground />
+      <QuantumElements />
       <Navbar />
       <HeroSection />
       <AboutSection />

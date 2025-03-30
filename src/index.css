@@ -94,6 +94,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf2 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -104,7 +105,6 @@
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(126, 87, 194, 0.2);
   pointer-events: none;
 }
 
@@ -115,6 +115,57 @@
 .section-heading::after {
   content: '';
   @apply absolute bottom-0 left-0 h-1 w-1/2 bg-theme-purple mt-2;
+}
+
+/* Quantum-inspired animations */
+@keyframes quantumFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  75% { transform: translateY(5px) rotate(-2deg); }
+}
+
+@keyframes quantumPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes quantumGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(126, 87, 194, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(126, 87, 194, 0.5); }
+}
+
+.animate-quantum-float {
+  animation: quantumFloat 6s ease-in-out infinite;
+}
+
+.animate-quantum-pulse {
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+.animate-quantum-glow {
+  animation: quantumGlow 3s ease-in-out infinite;
+}
+
+/* Wave effect for quantum mechanics visualization */
+.quantum-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-wave::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 20px;
+  background: repeating-linear-gradient(45deg, rgba(126, 87, 194, 0.2), rgba(126, 87, 194, 0.2) 10px, rgba(33, 195, 240, 0.2) 10px, rgba(33, 195, 240, 0.2) 20px);
+  animation: waveMotion 10s linear infinite;
+}
+
+@keyframes waveMotion {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @layer components {
@@ -128,5 +179,18 @@
   
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .quantum-card {
+    @apply relative overflow-hidden bg-gradient-to-br from-white to-purple-50 shadow-md;
+  }
+  
+  .quantum-card::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 rounded-lg blur opacity-20 transition-opacity duration-1000;
+  }
+  
+  .quantum-card:hover::before {
+    @apply opacity-30;
   }
 }

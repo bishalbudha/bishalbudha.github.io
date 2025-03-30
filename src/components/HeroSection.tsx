@@ -1,20 +1,22 @@
 
 import React from 'react';
-import ParticleBackground from './ParticleBackground';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Atom } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center">
-      <ParticleBackground />
       <div className="container mx-auto px-4 py-20 z-10">
         <div className="max-w-3xl mx-auto md:mx-0">
+          <div className="mb-4 flex items-center">
+            <Atom className="w-8 h-8 text-theme-purple mr-2 animate-quantum-pulse" />
+            <span className="text-sm text-theme-purple font-semibold tracking-wider">QUANTUM BIOPHYSICS</span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-theme-navy mb-4 animate-fade-in">
             Pushing the Boundaries of <span className="text-theme-purple">Physics in Medicine</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-700 mb-8 animate-slide-up">
             Biophysicist and medical physics researcher dedicated to developing innovative 
-            cancer treatment approaches through the application of advanced physics principles.
+            cancer treatment approaches through the application of quantum physics principles.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <a href="#research" className="btn-primary flex items-center justify-center">
@@ -24,6 +26,13 @@ const HeroSection: React.FC = () => {
             <a href="#contact" className="btn-outline flex items-center justify-center">
               Connect With Me
             </a>
+          </div>
+          
+          <div className="mt-16 p-4 bg-white/70 backdrop-blur-sm rounded-lg shadow-sm border border-purple-100 quantum-wave">
+            <h3 className="text-lg font-medium text-theme-navy mb-2">Quantum Physics in Medicine</h3>
+            <p className="text-slate-600">
+              Harnessing the principles of quantum mechanics to revolutionize cancer treatment through precise energy targeting at the subatomic level.
+            </p>
           </div>
         </div>
       </div>
