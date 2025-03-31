@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Atom } from 'lucide-react';
+import { Menu, X, BrainCircuit } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -31,12 +31,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="relative">
-              <Atom className="text-theme-purple w-6 h-6 md:w-7 md:h-7 animate-float" />
+              <BrainCircuit className="text-theme-purple w-6 h-6 md:w-7 md:h-7 animate-quantum-pulse" />
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-theme-purple-light rounded-full opacity-75"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-theme-navy font-semibold text-xl md:text-2xl font-montserrat bg-gradient-to-r from-theme-navy via-theme-purple to-theme-slate bg-clip-text text-transparent">Bishal Budha</span>
-              <span className="text-xs text-theme-slate opacity-75 tracking-wider font-light">Biophysics Researcher</span>
+              <span className="text-theme-navy font-bold text-xl md:text-2xl font-montserrat bg-gradient-to-r from-theme-navy via-theme-purple to-blue-500 bg-clip-text text-transparent">
+                Bishal Budha
+              </span>
             </div>
           </div>
           
