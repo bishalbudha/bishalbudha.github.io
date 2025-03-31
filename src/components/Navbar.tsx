@@ -30,8 +30,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
+            <BrainCircuit className="text-theme-purple w-6 h-6 md:w-7 md:h-7 animate-quantum-pulse" />
             <div className="relative">
-              <BrainCircuit className="text-theme-purple w-6 h-6 md:w-7 md:h-7 animate-quantum-pulse" />
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-theme-purple-light rounded-full opacity-75"></div>
             </div>
             <div className="flex flex-col">
