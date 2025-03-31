@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Atom, CircleDashed, Dna, Microscope, Syringe } from 'lucide-react';
+import { Atom, CircleDashed, Dna, Microscope, Syringe, Brain, BrainCircuit, Cpu } from 'lucide-react';
 
 const QuantumElements: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,19 +32,71 @@ const QuantumElements: React.FC = () => {
         </svg>
       </div>
       
-      {/* Medical Chemical Structure - Middle */}
+      {/* Medical Chemical Structure - Middle - Enhanced with more complexity */}
       <div className="absolute top-1/3 left-1/3 w-64 h-64 opacity-15 animate-quantum-pulse">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" stroke="#7E57C2" strokeWidth="3" opacity="0.8">
+          <g fill="none" stroke="#7E57C2" strokeWidth="3" opacity="0.8" className="chemical-bond">
             <circle cx="100" cy="100" r="20" />
             <circle cx="150" cy="70" r="15" />
             <circle cx="60" cy="60" r="15" />
             <circle cx="130" cy="140" r="15" />
             <circle cx="70" cy="150" r="15" />
+            <circle cx="170" cy="110" r="10" />
+            <circle cx="40" cy="110" r="10" />
             <line x1="100" y1="100" x2="150" y2="70" />
             <line x1="100" y1="100" x2="60" y2="60" />
             <line x1="100" y1="100" x2="130" y2="140" />
             <line x1="100" y1="100" x2="70" y2="150" />
+            <line x1="150" y1="70" x2="170" y2="110" />
+            <line x1="60" y1="60" x2="40" y2="110" />
+          </g>
+        </svg>
+      </div>
+      
+      {/* Neural Network / Machine Learning Visualization */}
+      <div className="hidden md:block absolute top-1/2 right-1/4 w-80 h-64 opacity-20 animate-quantum-float">
+        <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#4CAF50" strokeWidth="2" opacity="0.8">
+            {/* Input layer */}
+            <circle cx="40" cy="40" r="8" fill="#4CAF50" opacity="0.6" />
+            <circle cx="40" cy="80" r="8" fill="#4CAF50" opacity="0.6" />
+            <circle cx="40" cy="120" r="8" fill="#4CAF50" opacity="0.6" />
+            <circle cx="40" cy="160" r="8" fill="#4CAF50" opacity="0.6" />
+            
+            {/* Hidden layer */}
+            <circle cx="120" cy="60" r="8" fill="#FF5722" opacity="0.6" />
+            <circle cx="120" cy="100" r="8" fill="#FF5722" opacity="0.6" />
+            <circle cx="120" cy="140" r="8" fill="#FF5722" opacity="0.6" />
+            
+            {/* Output layer */}
+            <circle cx="200" cy="80" r="8" fill="#2196F3" opacity="0.6" />
+            <circle cx="200" cy="120" r="8" fill="#2196F3" opacity="0.6" />
+            
+            {/* Connections */}
+            <line x1="40" y1="40" x2="120" y2="60" className="neural-connection" />
+            <line x1="40" y1="40" x2="120" y2="100" className="neural-connection" />
+            <line x1="40" y1="40" x2="120" y2="140" className="neural-connection" />
+            
+            <line x1="40" y1="80" x2="120" y2="60" className="neural-connection" />
+            <line x1="40" y1="80" x2="120" y2="100" className="neural-connection" />
+            <line x1="40" y1="80" x2="120" y2="140" className="neural-connection" />
+            
+            <line x1="40" y1="120" x2="120" y2="60" className="neural-connection" />
+            <line x1="40" y1="120" x2="120" y2="100" className="neural-connection" />
+            <line x1="40" y1="120" x2="120" y2="140" className="neural-connection" />
+            
+            <line x1="40" y1="160" x2="120" y2="60" className="neural-connection" />
+            <line x1="40" y1="160" x2="120" y2="100" className="neural-connection" />
+            <line x1="40" y1="160" x2="120" y2="140" className="neural-connection" />
+            
+            <line x1="120" y1="60" x2="200" y2="80" className="neural-connection" />
+            <line x1="120" y1="60" x2="200" y2="120" className="neural-connection" />
+            
+            <line x1="120" y1="100" x2="200" y2="80" className="neural-connection" />
+            <line x1="120" y1="100" x2="200" y2="120" className="neural-connection" />
+            
+            <line x1="120" y1="140" x2="200" y2="80" className="neural-connection" />
+            <line x1="120" y1="140" x2="200" y2="120" className="neural-connection" />
           </g>
         </svg>
       </div>
@@ -66,8 +118,21 @@ const QuantumElements: React.FC = () => {
         <Syringe size={60} className="text-green-500" />
       </div>
       
-      {/* Radiation Symbol */}
-      <div className="hidden md:block absolute bottom-1/4 left-1/4 opacity-10 animate-quantum-pulse">
+      {/* Machine Learning Icons */}
+      <div className="hidden md:block absolute top-3/4 right-1/3 opacity-10 animate-quantum-pulse">
+        <BrainCircuit size={80} className="text-orange-500" />
+      </div>
+      
+      <div className="hidden md:block absolute bottom-1/4 right-2/3 opacity-10 animate-quantum-float">
+        <Brain size={70} className="text-pink-500" />
+      </div>
+      
+      <div className="hidden md:block absolute top-1/2 right-1/2 opacity-10 animate-quantum-glow">
+        <Cpu size={50} className="text-blue-400" />
+      </div>
+      
+      {/* Radiation Symbol - Enhanced with better animation */}
+      <div className="hidden md:block absolute bottom-1/4 left-1/4 opacity-15 animate-radiation-pulse">
         <div className="w-16 h-16 rounded-full border-4 border-yellow-500 flex items-center justify-center">
           <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
           <div className="absolute w-24 h-4 bg-yellow-500" style={{ transform: 'rotate(60deg)' }}></div>

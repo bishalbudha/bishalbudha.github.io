@@ -157,6 +157,19 @@
   50% { filter: drop-shadow(0 0 15px rgba(240, 100, 40, 0.8)); opacity: 1; }
 }
 
+/* Neural network connection animations */
+@keyframes neuralPulse {
+  0%, 100% { stroke-opacity: 0.2; stroke-width: 1; }
+  50% { stroke-opacity: 0.8; stroke-width: 2; }
+}
+
+.neural-connection {
+  stroke: rgba(76, 175, 80, 0.6);
+  stroke-dasharray: 10;
+  stroke-dashoffset: 20;
+  animation: dashOffset 3s linear infinite, neuralPulse 2s ease-in-out infinite;
+}
+
 .animate-quantum-float {
   animation: quantumFloat 6s ease-in-out infinite;
 }
